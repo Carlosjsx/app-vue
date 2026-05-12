@@ -1,0 +1,83 @@
+header{
+    background: rebeccapurple;
+    padding: 0 1rem;
+    position: fixed;
+    width: 100%;
+    padding: .6rem 0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.menu{
+    background-color: blueviolet;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    padding-top: 60px;
+}
+
+.menu.menu.ativo{
+    display: flex;
+}
+
+.menu a{
+    color: white;
+}
+ 
+.btn-ham{
+    border: none;
+    background-color: transparent;
+}
+
+.btn-ham span{
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+@media(min-width:568px){
+    header{
+        background: green;
+    }
+
+    .menu{
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap:1.5rem;
+        position: static;
+        height: 100%;
+        padding-top: 0;
+    }
+
+    .btn-ham{
+        display: none;
+    }
+
+    .menu.ativo{
+        display: block;
+    }
+}

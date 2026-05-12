@@ -1,17 +1,27 @@
 <script setup lang="ts">
+    import {ref} from 'vue';
 
+    const menu = ref(false);
+
+    function exibirMenuMobile(){
+        menu.value = !menu.value;
+    }
 </script>
 
 <template>
     <header>
-        <nav>
+        <nav class="navbar">
             <div>
-                <router-link to="/">
-                    🚀 Vue.TS
+                <router-link class="brand" to="/">
+                    <span class="material-symbols-outlined">stacks</span>
+                    <p>
+                        Vue.TS
+                    </p>
+
                 </router-link>
             </div>
 
-            <ul>
+            <ul class="menu":class="{'ativo':menu}">
                 <li>
                     <router-link to="/" class="link">Home</router-link>
                 </li>
@@ -22,12 +32,15 @@
                     <router-link to="/cadastro" class="link">Cadastrar</router-link>
                 </li>
             </ul>
+            <button class="btn-ham" @click="exibirMenuMobile">
+                <span class="material-symbols-outlined">
+                    {{ menu ? 'close' : 'menu' }}
+                </span>
+            </button>
         </nav>
     </header>
 </template>
 
-<style scoped>
-link {
-    cursor: pointer;
-}
+<style scoped lang="scss">
+@import "../styles/appHeader.scss";
 </style>
