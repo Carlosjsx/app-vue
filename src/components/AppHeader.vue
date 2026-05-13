@@ -21,15 +21,15 @@
                 </router-link>
             </div>
 
-            <ul class="menu":class="{'ativo':menu}">
+            <ul class="menu" :class="{'ativo':menu}">
                 <li>
-                    <router-link to="/" class="link">Home</router-link>
+                    <router-link to="/" @click="exibirMenuMobile" class="link">Home</router-link>
                 </li>
                 <li>
-                    <router-link to="/login" class="link">Entrar</router-link>
+                    <router-link to="/login" @click="exibirMenuMobile" class="link">Entrar</router-link>
                 </li>
                 <li>
-                    <router-link to="/cadastro" class="link">Cadastrar</router-link>
+                    <router-link to="/cadastro" @click="exibirMenuMobile" class="link">Cadastrar</router-link>
                 </li>
             </ul>
             <button class="btn-ham" @click="exibirMenuMobile">

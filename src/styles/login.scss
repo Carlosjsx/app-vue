@@ -1,3 +1,127 @@
-.bg{
-    background-color: green;
+ .wrapper-main {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+ .box-banner-form {
+  background-image: url("https://images.unsplash.com/photo-1773332598413-a6d5279d1ae8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex; 
+}
+
+.banner-overlay {
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: white;
+  padding: 40px 60px 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tag-marca{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.tag-marca p{
+  margin: 0;
+  padding: 0;
+}
+.tag-marca span{
+  font-size: 12px;
+}
+
+.banner-overlay p{
+  padding: 1rem 0 0 0;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+ .tag-effection {
+  border-left: 4px solid white;
+  padding: 0 0 0 1.4rem;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.tag-effection span {
+  font-size: 12px;
+  display: block; 
+}
+
+ .box-formulario {
+  background-color: #00000020;
+  padding: 1rem;
+}
+
+
+
+.group {
+  display: flex;
+  flex-direction: column;
+   padding: .3rem 0;
+}
+
+.group input {
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+  outline: none;
+}
+
+.group .error {
+  color: red;
+  font-size: 12px;
+  min-height: 15px; /* Reserva o espaço de uma linha */
+  margin-top: 4px;  /* Espaçamento fixo entre o input e o erro */
+  display: block;   /* Garante que o span se comporte como bloco */
+}
+
+.group button {
+  border: 0;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.copyright{
+  font-size: 10px;
+  padding: 1rem 0 0 0;
+}
+
+
+.form h2, .form p{
+  text-align: center;
+}
+
+.form h2{
+  padding-top: 1rem;
+  padding-bottom: .4rem;
+}
+
+@media(min-width: 568px) {
+  .wrapper-main {
+    flex-direction: row;
+    min-height: 400px; 
+  }
+
+  .box-banner-form {
+    width: 50%;
+  }
+
+  .box-formulario {
+    width: 50%;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
